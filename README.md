@@ -8,19 +8,14 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/maintainability)](https://codeclimate.com/github/grafana/simple-react-panel/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/test_coverage)](https://codeclimate.com/github/grafana/simple-react-panel/test_coverage) -->
 
-for å lage en plugin kan man følge denne guiden:
-installer node: 12 <=  node version <= 13
-Verdt å merke:
+### for å lage en plugin kan man følge denne guiden:
+1. installer node: 12 <=  node version <= 13
 
-Krever node versjon mellom 12 og 13. Dette kan løses med nvm (da kan du ha flere versjoner av node)
+2. https://grafana.com/tutorials/build-a-panel-plugin/#1
 
-1. gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
-https://grafana.com/tutorials/build-a-panel-plugin/#1
+3. Første gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
 
-
-Krever node versjon mellom 12 og 13. Dette kan løses med nvm (da kan du ha flere versjoner av node)
-
-1. gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
+readme fra boilerplate følger:
 
 This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
 
