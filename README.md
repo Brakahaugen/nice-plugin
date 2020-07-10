@@ -22,9 +22,10 @@ https://grafana.com/grafana/download?platform=windows
 4. https://grafana.com/tutorials/build-a-panel-plugin/#2 (Fra seksjon 2: Set up your environment. For meg er config filen til Grafana som det referes til i guien i "C:\Program Files\GrafanaLabs\conf". Endre pathen i config filen ved åpne den i f.eks vs-code)
 
 5. Første gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
-<br /><br /><br /><br /><br />
 
 6. Anbefaler å følge step 7 i tutorialen, for å lære litt om hvordan dataen hentes ut inne i React-komponenten"
+<br /><br /><br /><br /><br />
+
 
 
 This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
