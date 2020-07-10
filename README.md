@@ -9,7 +9,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/test_coverage)](https://codeclimate.com/github/grafana/simple-react-panel/test_coverage) -->
 
 ### for å lage en plugin kan man følge denne guiden:
-1. installer node: 12 <=  node version <= 13
+1. installer node: 12 <=  node version <= 13 (Bruk nvm hvis du vil ha flere versjoner av node tilgjengelig)
 
 2. https://grafana.com/tutorials/build-a-panel-plugin/#1
 
