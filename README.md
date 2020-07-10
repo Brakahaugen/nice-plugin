@@ -23,7 +23,7 @@ https://grafana.com/grafana/download?platform=windows
 
 5. Første gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
 
-6. Anbefaler å følge step 7 i tutorialen, for å lære litt om hvordan dataen hentes ut inne i React-komponenten"
+6. Anbefaler å følge step 7 i tutorialen, for å lære litt om hvordan dataen hentes ut inne i React-komponenten.
 <br /><br /><br /><br /><br />
 
 
