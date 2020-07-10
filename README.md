@@ -17,7 +17,7 @@ https://grafana.com/grafana/download?platform=windows
 
 2. Åpne Tjenester(Services) på Windows og se at Grafana kjører. Åpnes i localhost:3000 
 
-3. installer node: 12 <=  node version <= 13 (Bruk nvm hvis du vil ha flere versjoner av node tilgjengelig)
+3. installer node: 12 <=  node version < 13 (Bruk nvm hvis du vil ha flere versjoner av node tilgjengelig)
 
 4. https://grafana.com/tutorials/build-a-panel-plugin/#2 (Fra seksjon 2: Set up your environment. For meg er config filen til Grafana som det referes til i guien i "C:\Program Files\GrafanaLabs\conf". Endre pathen i config filen ved åpne den i f.eks vs-code)
 
