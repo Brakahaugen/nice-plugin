@@ -8,8 +8,24 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/maintainability)](https://codeclimate.com/github/grafana/simple-react-panel/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/test_coverage)](https://codeclimate.com/github/grafana/simple-react-panel/test_coverage) -->
 
-This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
+#### Dette repoet er et eksempel på en custom Panel Plugin lagd med grafana-toolkit. For å lage en ny plugin bør den opprettes gjennom grafana-toolkit som har en boilerplate for opprettelse av nye plugins.
 
+### for å lage en plugin med grafana-toolkit kan man følge denne guiden:
+
+1. Last ned Grafana Installer for Windows, og installer på PC: 
+https://grafana.com/grafana/download?platform=windows
+
+2. Åpne Tjenester(Services) på Windows og se at Grafana kjører. Åpnes i localhost:3000 
+
+3. installer node: 12 <=  node version <= 13 (Bruk nvm hvis du vil ha flere versjoner av node tilgjengelig)
+
+4. https://grafana.com/tutorials/build-a-panel-plugin/#3 (Fra seksjon 3: Create a new plugin)
+
+5. Første gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
+<br /><br /><br /><br /><br />
+
+
+This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
 
 ## What is Grafana Panel Plugin?
 Panels are the building blocks of Grafana. They allow you to visualize data in different ways. While Grafana has several types of panels already built-in, you can also build your own panel, to add support for other visualizations.
