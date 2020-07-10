@@ -14,9 +14,9 @@
 2. https://grafana.com/tutorials/build-a-panel-plugin/#1
 
 3. Første gang, når pluginen opprettes må Grafana restartes. Videre holder det å rebuilde pluginen for å oppdatere den inne i Grafana.
-
+<br /><br /><br />
 readme fra boilerplate følger:
-
+<br />
 This template is a starting point for building Grafana Panel Plugins in Grafana 7.0+
 
 ## What is Grafana Panel Plugin?
