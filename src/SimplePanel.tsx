@@ -3,36 +3,10 @@ import { PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
 import { stylesFactory, useTheme } from '@grafana/ui';
+import ApplicationCircle from "applicationCircle"
 
 interface Props extends PanelProps<SimpleOptions> {}
-interface App_props {
-  index: number,
-  total_length: number,
-  availability: number,
-  name: any
-}
 
-
-const ApplicationModule = (props: App_props) => {
-  
-  const theme = useTheme();
-
-  let cx = ((props.index % (props.total_length**0.5))*200 - 300).toString();
-  let cy = (Math.floor(props.index / (props.total_length**0.5))*200 - 300).toString();
-  
-  return (
-    <g>
-      {/* <polygon points="0,100 100,0  0,-100 -100,0" style={{ fill: color }} /> */}
-      
-      <circle style={{ fill: props.availability >= 100 ? theme.palette.blue80: theme.palette.red88}} 
-              onClick = {() => props.name = "Klikkorama"}
-              cx={cx} 
-              cy={cy} 
-              r={600/props.total_length} />
-      <text x={cx} y={cy} text-anchor="middle" stroke="#51c5cf" stroke-width="2px" dy=".3em">{props.name}</text>
-    </g>
-  )
-};
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
   const theme = useTheme();
@@ -60,9 +34,11 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   for (let i = 0; i < data["series"].length; ++i) {
     console.log(data["series"][i]["fields"][0]["values"].get(0));
     console.log(data["series"][i]["refId"])
-    let avail = data["series"][i]["fields"][0]["values"].get(0);
+    let avail = data["series"][i]["fields"][0]["values"].get(i);
     // avail >= 100 ? 
-    availableApplications.push(<ApplicationModule 
+    availableApplications.push(<ApplicationCircle 
+                                    height={height}
+                                    width={width}
                                     total_length={data["series"].length} 
                                     availability={avail} 
                                     index={i}
@@ -113,11 +89,30 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         viewBox={`-${width / 2} -${height / 2} ${width} ${height}`}
       >
 
+        <circle 
+          style={{ fill: theme.palette.red88}} 
+          onClick = {() => console.log("cli")}
+          cx={0} 
+          cy={0} 
+          r={50} 
+        />
+        <circle 
+          style={{ fill: theme.palette.red88}} 
+          onClick = {() => console.log("cli")}
+          cx={width/2} 
+          cy={height/2} 
+          r={50} 
+        />
+        
+
+              
         {availableApplications.map((component, index) => (
           <React.Fragment key={index}>
             { component }
           </React.Fragment>
         ))}
+
+
 
       </svg>
       

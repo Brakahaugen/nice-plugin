@@ -7,3 +7,12 @@ export interface SimpleOptions {
   seriesCountSize: SeriesSize;
   color: CircleColor;
 }
+
+export interface ApplicationProps {
+  height: number;
+  width: number;
+  index: number
+  total_length: number;
+  availability: number;
+  name: any
+}
