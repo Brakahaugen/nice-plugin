@@ -8,7 +8,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/maintainability)](https://codeclimate.com/github/grafana/simple-react-panel/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1dee2585eb412f913cbb/test_coverage)](https://codeclimate.com/github/grafana/simple-react-panel/test_coverage) -->
 
-## Dette repoet er et eksempel på en custom Panel Plugin lagd med grafana-toolkit. For å lage en ny plugin bør den opprettes gjennom grafana-toolkit som har en boilerplate for opprettelse av nye plugins.
+#### Dette repoet er et eksempel på en custom Panel Plugin lagd med grafana-toolkit. For å lage en ny plugin bør den opprettes gjennom grafana-toolkit som har en boilerplate for opprettelse av nye plugins.
 
 ### for å lage en plugin med grafana-toolkit kan man følge denne guiden:
 
