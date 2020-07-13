@@ -15,6 +15,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   console.log(data)
   console.log(width)
   console.log(height)
+  console.log("Consol loging don")
 
   // console.log(data["series"][0]["fields"][0]["values"].get(0)) //This will access the first row of values
   
@@ -31,10 +32,17 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   // let unavailableApplications = [] //Burde pushe navnet eller noe
 
 
+  // const radii = data.series
+  //   .map(series => series.fields.find(field => field.type === 'number'))
+  //   .map(field => field?.values)
+  // console.log(radii)
+
   for (let i = 0; i < data["series"].length; ++i) {
     console.log(data["series"][i]["fields"][0]["values"].get(0));
     console.log(data["series"][i]["refId"])
-    let avail = data["series"][i]["fields"][0]["values"].get(i);
+    // console.log(data["request"]["targets"])
+    
+    let avail = data["series"][i]["fields"][1]["values"].get(i);
     // avail >= 100 ? 
     availableApplications.push(<ApplicationCircle 
                                     height={height}
@@ -42,7 +50,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
                                     total_length={data["series"].length} 
                                     availability={avail} 
                                     index={i}
-                                    name={data["series"][i]["refId"]}
+                                    name={data["request"]?.targets[i]?.datasource}
                                   />)
         // data["series"][i]["refId"]): 
       // unavailableApplications.push(data["series"][i]["refId"]);
@@ -51,6 +59,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
 
   //Nå holder series alle seriene som har blitt querya etter.
   console.log(availableApplications)
+  console.log("WTF")
   // console.log(unavailableApplications)
   
 
@@ -88,21 +97,6 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox={`-${width / 2} -${height / 2} ${width} ${height}`}
       >
-
-        <circle 
-          style={{ fill: theme.palette.red88}} 
-          onClick = {() => console.log("cli")}
-          cx={0} 
-          cy={0} 
-          r={50} 
-        />
-        <circle 
-          style={{ fill: theme.palette.red88}} 
-          onClick = {() => console.log("cli")}
-          cx={width/2} 
-          cy={height/2} 
-          r={50} 
-        />
         
 
               
@@ -127,7 +121,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
             Number of series: {data.series.length}
           </div>
         )}
-        <div>Text option value: {options.text}</div>
+        {/* <div>Text option value: {options.text}</div> */}
       </div>
     </div>
   );
